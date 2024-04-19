@@ -1,0 +1,20 @@
+version: '3'
+services:
+  nextjs:
+    build: .
+    ports:
+      - "3000:3000"
+    networks:
+      - mynetwork
+  nextjs2:
+    build: .
+    ports:
+      - "3000:3000"
+    networks:
+      - mynetwork
+      
+networks:
+  mynetwork:
+    external:
+      name: mynetwork
+
